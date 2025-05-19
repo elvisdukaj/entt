@@ -1,6 +1,7 @@
 #ifndef ENTT_CONTAINER_DENSE_MAP_HPP
 #define ENTT_CONTAINER_DENSE_MAP_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <cmath>
 #include <cstddef>
 #include <functional>
@@ -11,6 +12,9 @@
 #include <type_traits>
 #include <utility>
 #include <vector>
+#else
+#import std;
+#endif
 #include "../config/config.h"
 #include "../core/bit.hpp"
 #include "../core/compressed_pair.hpp"

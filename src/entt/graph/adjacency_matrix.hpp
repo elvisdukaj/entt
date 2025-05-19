@@ -1,12 +1,16 @@
 #ifndef ENTT_GRAPH_ADJACENCY_MATRIX_HPP
 #define ENTT_GRAPH_ADJACENCY_MATRIX_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <cstddef>
 #include <iterator>
 #include <memory>
 #include <type_traits>
 #include <utility>
 #include <vector>
+#else
+#import std;
+#endif
 #include "../config/config.h"
 #include "../core/iterator.hpp"
 #include "fwd.hpp"

@@ -315,6 +315,7 @@ endif()
 
 option(ENTT_BUILD_TESTBED "Enable building testbed." OFF)
 option(ENTT_BUILD_TESTING "Enable building tests." OFF)
+option(ENTT_BUILD_IMPORT_STD_TESTING "Enable build import_std tests." OFF)
 
 if(ENTT_BUILD_TESTBED OR ENTT_BUILD_TESTING)
     set(ENTT_ID_TYPE std::uint32_t CACHE STRING "Type of identifiers to use for tests and testbed")
@@ -337,6 +338,13 @@ if(ENTT_BUILD_TESTBED OR ENTT_BUILD_TESTING)
         enable_testing()
         add_subdirectory(test)
     endif()
+endif()
+
+if(ENTT_BUILD_IMPORT_STD_TESTING)
+    set(ENTT_ID_TYPE std::uint32_t CACHE STRING "Type of identifiers to use for tests and testbed")
+    set(ENTT_CXX_STD cxx_std_23 CACHE STRING "C++ standard revision to use for tests and testbed")
+
+    add_subdirectory(test_import_std)
 endif()
 
 # Documentation

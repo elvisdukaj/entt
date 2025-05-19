@@ -3,6 +3,7 @@
 #ifndef ENTT_META_CONTAINER_HPP
 #define ENTT_META_CONTAINER_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <array>
 #include <deque>
 #include <iterator>
@@ -14,6 +15,9 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <vector>
+#else
+#import std;
+#endif
 #include "../container/dense_map.hpp"
 #include "../container/dense_set.hpp"
 #include "../core/type_traits.hpp"

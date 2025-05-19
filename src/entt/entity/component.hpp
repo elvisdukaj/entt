@@ -1,8 +1,13 @@
 #ifndef ENTT_ENTITY_COMPONENT_HPP
 #define ENTT_ENTITY_COMPONENT_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <cstddef>
 #include <type_traits>
+#else
+#import std;
+#endif
+
 #include "../config/config.h"
 #include "fwd.hpp"
 

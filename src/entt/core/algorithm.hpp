@@ -1,11 +1,15 @@
 #ifndef ENTT_CORE_ALGORITHM_HPP
 #define ENTT_CORE_ALGORITHM_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <algorithm>
 #include <functional>
 #include <iterator>
 #include <utility>
 #include <vector>
+#else
+#import std;
+#endif
 #include "utility.hpp"
 
 namespace entt {

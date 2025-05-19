@@ -1,8 +1,12 @@
 #ifndef ENTT_LOCATOR_LOCATOR_HPP
 #define ENTT_LOCATOR_LOCATOR_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <memory>
 #include <utility>
+#else
+#import std;
+#endif
 #include "../config/config.h"
 
 namespace entt {

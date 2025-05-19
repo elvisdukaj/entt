@@ -1,6 +1,7 @@
 #ifndef ENTT_RESOURCE_RESOURCE_CACHE_HPP
 #define ENTT_RESOURCE_RESOURCE_CACHE_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <cstddef>
 #include <functional>
 #include <iterator>
@@ -8,6 +9,9 @@
 #include <tuple>
 #include <type_traits>
 #include <utility>
+#else
+#import std;
+#endif
 #include "../container/dense_map.hpp"
 #include "../core/compressed_pair.hpp"
 #include "../core/fwd.hpp"

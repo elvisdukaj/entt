@@ -14,6 +14,7 @@
     * [ENTT_DISABLE_ASSERT](#entt_disable_assert)
   * [ENTT_NO_ETO](#entt_no_eto)
   * [ENTT_STANDARD_CPP](#entt_standard_cpp)
+  * [ENTT_IMPORT_STD](#entt_import_std)
 
 # Introduction
 
@@ -113,3 +114,8 @@ This definition prevents the library from using non-standard techniques, that
 is, functionalities that are not fully compliant with the standard C++.<br/>
 While there are no known portability issues at the time of this writing, this
 should make the library fully portable anyway if needed.
+
+## ENTT_IMPORT_STD
+
+`EnTT` import the standard C++ library as a module via `import std;` instead
+of using the pre-processor `#include` directive.

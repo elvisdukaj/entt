@@ -30,17 +30,25 @@
 #endif
 
 #ifdef ENTT_USE_ATOMIC
-#    include <atomic>
+#    if !defined(ENTT_IMPORT_STD)
+#        include <atomic>
+#    else
+#        import std;
+#endif
 #    define ENTT_MAYBE_ATOMIC(Type) std::atomic<Type>
 #else
 #    define ENTT_MAYBE_ATOMIC(Type) Type
 #endif
 
+#if defined(ENTT_IMPORT_STD)
+import std;
+#endif
+
 #ifndef ENTT_ID_TYPE
-#    include <cstdint>
+#    if !defined(ENTT_IMPORT_STD)
+#        include <cstdint>
+#endif
 #    define ENTT_ID_TYPE std::uint32_t
-#else
-#    include <cstdint> // provides coverage for types in the std namespace
 #endif
 
 #ifndef ENTT_SPARSE_PAGE

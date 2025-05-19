@@ -1,7 +1,11 @@
 #ifndef ENTT_POLY_FWD_HPP
 #define ENTT_POLY_FWD_HPP
 
+#if !defined(ENTT_IMPORT_STD)
 #include <cstddef>
+#else
+#import std;
+#endif
 
 namespace entt {
 
